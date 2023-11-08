@@ -42,12 +42,15 @@ public class Simple extends Elemento {
     }
 
     @Override
-    public ArrayList<Elemento> buscar(CondicionBusqueda c){
+    public ArrayList<Elemento> buscar(CondicionBusqueda c) {
         ArrayList<Elemento> listarElementos = new ArrayList<>();
-        if(c.cumple(this)){
+        if (c.cumple(this)) {
             listarElementos.add(this);
         }
         return listarElementos;
     }
 
+    public String toString() {
+        return "Nombre: " + this.getNombre() + " - Cantidad: " + this.getCantidad() + "\n";
+    }
 }

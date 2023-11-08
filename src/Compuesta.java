@@ -27,6 +27,14 @@ public class Compuesta extends Elemento{
         return listarElementos;
     }
 
+    public String toString(){
+        String salida="";
+        for(Elemento e: elementos){
+            salida = "Nombre: "+e.getNombre()+" - Cantidad: "+e.getCantidad()+"\n";
+        }
+        return salida;
+    }
+
     //Metodos de la clase abstracta
     @Override
     public int getCantidad(){
